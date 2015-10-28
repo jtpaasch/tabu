@@ -26,33 +26,32 @@ Then, you can install it with pip, but using the ``editable`` flag::
     > pip install ~/code/tabu --editable
 
 
+System Directory
+----------------
+
+Data and code regarding the system as a whole is kept in its own directory::
+
+    tabu/
+        system/  <---- System-wide files go in here.
+    
+
 Component Directories
 ---------------------
 
-Each component gets its own directory in the ``tabu/components`` folder::
+Each component gets its own directory in the ``tabu/components`` folder. If
+``foo`` and ``bar`` are separate components, it would look something like this::
 
     tabu/
         components/
             foo/
             bar/
 
-Where ``foo`` and ``bar`` are separate components.
 
+Where to put CLI plugins
+------------------------
 
-System Directory
-----------------
-
-Data and code regarding the system as a whole is kept in its own directory too:
-
-    tabu/
-        system/  <---- System-wide files go in here.
-
-
-CLI Plugins
------------
-
-To add subcommands to the CLI, create a directory in your component directory
-called ``cli``, and put files in there that define the CLI.
+To add subcommands to the CLI for a component, create a directory in your
+component directory called ``cli``, and put files in there that define the CLI.
 
 For instance, if you want to create a subcommand called ``foo``, you would
 put a file called ``foo.py`` in a ``cli`` folder inside the foo component
@@ -70,9 +69,13 @@ on how to use the library to define your commands, see the documentation:
 http://click.pocoo.org/5/ You can look at the ``system`` cli for examples
 at ``tabu/system/cli/system.py``.
 
-Last, you need to register your plugin with the main CLI. To do that, go
-to the file ``ns/cli/main.py``, import your CLI module, and add it to the
-``plugins`` dictionary, like this::
+
+Registering CLI plugins
+-----------------------
+
+Once you have CLI plugin code written, you need to register your plugin with the
+main CLI. To do that, go to the file ``ns/cli/main.py``, import your CLI module,
+and add it to the ``plugins`` dictionary, like this::
 
     from ns.components.foo.cli import foo
   
@@ -81,13 +84,13 @@ to the file ``ns/cli/main.py``, import your CLI module, and add it to the
         "foo": foo,
         }
 
-Once you do that, the CLI will include your subcommand. You should see
-it listed in the help::
+That tells the CLI to include your subcommand. You can then see it listed
+in the help::
 
     > tabu --help
-    -->  ...
-    -->  Commands:
-    -->    foo  ...
+    --   ...
+    --   Commands:
+    --     foo  ...
 
 Note: You may need to re-install the whole package to get the new CLI
 subcommands, unless you've installed with the ``pip ... --editable`` flag.
