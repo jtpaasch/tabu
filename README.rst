@@ -7,7 +7,7 @@ A tool for managing multiple projects.
 All the projects together are a ``system``, and each project is a ``component``
 of the system.
 
-The name comes from the Tabu Cocktail, listed in Trader Vic's _Bartender's Guide".
+The name comes from the Tabu Cocktail, listed in Trader Vic's _Bartender's Guide_.
 
 
 Installation
