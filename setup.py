@@ -18,7 +18,7 @@ setup(
 
     # What's the project's name?
     # E.g., when you type ``pip install <name>``.
-    name="ns",
+    name="tabu",
 
     # The version number should comply with PEP440.
     version="0.1.0",
