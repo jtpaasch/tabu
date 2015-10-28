@@ -64,7 +64,7 @@ folder, like this::
                     foo.py  <---- Defines the ``foo`` subcommand.
 
 Then you would define your ``foo`` subcommand inside that ``foo.py``
-file. The CLI is based on Armin Rocher's ``click`` library. For more
+file. The CLI is based on Armin Ronacher's ``click`` library. For more
 on how to use the library to define your commands, see the documentation:
 http://click.pocoo.org/5/ You can look at the ``system`` cli for examples
 at ``tabu/system/cli/system.py``.
