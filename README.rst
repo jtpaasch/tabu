@@ -64,9 +64,13 @@ folder, like this::
                     foo.py  <---- Defines the ``foo`` subcommand.
 
 Then you would define your ``foo`` subcommand inside that ``foo.py``
-file. The CLI is based on Armin Ronacher's ``click`` library. For more
+file.
+
+The CLI is based on Armin Ronacher's ``click`` library. For more
 on how to use the library to define your commands, see the documentation:
-http://click.pocoo.org/5/ You can look at the ``system`` cli for examples
+http://click.pocoo.org/5/.
+
+You can also look at the ``system`` cli for examples
 at ``tabu/system/cli/system.py``.
 
 
@@ -74,10 +78,10 @@ Registering CLI plugins
 -----------------------
 
 Once you have CLI plugin code written, you need to register your plugin with the
-main CLI. To do that, go to the file ``ns/cli/main.py``, import your CLI module,
+main CLI. To do that, go to the file ``tabu/cli/main.py``, import your CLI module,
 and add it to the ``plugins`` dictionary, like this::
 
-    from ns.components.foo.cli import foo
+    from tabu.components.foo.cli import foo
   
     plugins = {
         ...
