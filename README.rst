@@ -25,9 +25,6 @@ Then, you can install it with pip, but using the ``editable`` flag::
 
     > pip install ~/code/tabu --editable
 
-At that point, you can make changes in ``~/code/tabu``, and you won't need to
- reinstall.
- 
 
 Component Directories
 ---------------------
