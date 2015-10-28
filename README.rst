@@ -54,14 +54,14 @@ To add subcommands to the CLI for a component, create a directory in your
 component directory called ``cli``, and put files in there that define the CLI.
 
 For instance, if you want to create a subcommand called ``foo``, you would
-put a file called ``foo.py`` in a ``cli`` folder inside the foo component
+put a file called ``foo.py`` in a ``cli`` folder inside the component's
 folder, like this::
 
     tabu/
         components/
-            foo/        <---- The component's folder.
-                cli/    <---- CLI files go in here.
-                foo.py  <---- A file that defines the ``foo`` subcommand.
+            foo/            <---- The component's folder.
+                cli/        <---- CLI files go in here.
+                    foo.py  <---- Defines the ``foo`` subcommand.
 
 Then you would define your ``foo`` subcommand inside that ``foo.py``
 file. The CLI is based on Armin Rocher's ``click`` library. For more
