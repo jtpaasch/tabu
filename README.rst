@@ -3,6 +3,11 @@ Tabu
 
 A tool for managing multiple projects.
 
+
+All the projects together are a ``system``, and each project is a ``component``
+of the system.
+
+
 Installation
 ------------
 
@@ -22,7 +27,7 @@ Then, you can install it with pip, but using the ``editable`` flag::
 
 At that point, you can make changes in ``~/code/tabu``, and you won't need to
  reinstall.
-
+ 
 
 Component Directories
 ---------------------
@@ -30,11 +35,20 @@ Component Directories
 Each component gets its own directory in the ``tabu/components`` folder::
 
     tabu/
-      components/
-        papi/
-        platform/
-        polaris/
-        stem/
+        components/
+            foo/
+            bar/
+
+Where ``foo`` and ``bar`` are separate components.
+
+
+System Directory
+----------------
+
+Data and code regarding the system as a whole is kept in its own directory too:
+
+    tabu/
+        system/  <---- System-wide files go in here.
 
 
 CLI Plugins
@@ -48,10 +62,10 @@ put a file called ``foo.py`` in a ``cli`` folder inside the foo component
 folder, like this::
 
     tabu/
-      components/
-        foo/         <---- The component's folder.
-          cli/       <---- CLI files go in here.
-            foo.py   <---- A file that defines the ``foo`` subcommand.
+        components/
+            foo/        <---- The component's folder.
+                cli/    <---- CLI files go in here.
+                foo.py  <---- A file that defines the ``foo`` subcommand.
 
 Then you would define your ``foo`` subcommand inside that ``foo.py``
 file. The CLI is based on Armin Rocher's ``click`` library. For more
