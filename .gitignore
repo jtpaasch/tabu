@@ -12,3 +12,5 @@ __pycache__
 .coverage*
 .hypothesis
 
+# Setuptools/distutils artifacts.
+*.egg-info

@@ -24,7 +24,7 @@ setup(
     version="0.1.0",
 
     # Describe the project.
-    description="A tool for managing multiple projects."
+    description="A tool for managing multiple projects.",
     long_description=long_description,
     keywords="deployment development",
 
