@@ -26,6 +26,18 @@ Then, you can install it with pip, but using the ``editable`` flag::
     > pip install ~/code/tabu --editable
 
 
+Usage
+-----
+
+From a terminal, use the command line tool. For instance, to see the help::
+
+    > tabu --help
+
+Use the ``--help`` flag to puruse other commands too, e.g.::
+
+   > tabu system --help
+
+
 System Directory
 ----------------
 
