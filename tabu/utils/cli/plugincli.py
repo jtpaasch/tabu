@@ -1,14 +1,23 @@
 # -*- coding: utf-8 -*-
 
-"""A plugin based click CLI."""
+"""A plugin-based ``click`` CLI.
+
+The ``click`` package is the command-line framework by Armin Ronacher.
+See http://click.pocoo.org/5/ for documentation.
+
+This subclass simply loads the subcommands from plugins passed to
+the constructor. Each module is just a regular old python module
+which defines some ``click`` command (or command group).
+
+"""
 
 import click
 
 
 class PluginCli(click.MultiCommand):
-    """A click command line tool that loads its subcommands from plugins.
+    """A ``click`` CLI that loads its subcommands from plugins.
 
-    The plugins passed to the constructor as a parameter.
+    The plugins are passed to the constructor as a parameter.
 
     """
 

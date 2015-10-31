@@ -55,19 +55,23 @@ setup(
         "Programming Language :: Python :: 3.4",
         "Programming Language :: Python :: 3.5",
 
-    ],
+        ],
 
     # Which packages should be included in the dist?
     packages=find_packages(
         exclude=[
             "venv",
             "tests",
-        ]
-    ),
+            ]
+        ),
 
     # What are the run-time dependencies?
     # Pip will install these when you install this package.
-    install_requires=["click"],
+    install_requires=[
+        "click",
+        "requests",
+        "simplygithub",
+        ],
 
     # Are there any extra dependency groups, e.g., for testing?
     extras_require={
@@ -76,8 +80,8 @@ setup(
             "coverage",
             "flake8",
             "pep257",
-        ],
-    },
+            ],
+        },
 
     # This is an executable script, so where is/are the entry point/s?
     entry_points={
@@ -86,7 +90,7 @@ setup(
             # Make a script/executable called ``tabu`` which,
             # when executed, loads and invokes ``tabu.cli.main.cli()``.
             "tabu = tabu.cli.main:cli",
-        ],
-    },
+            ],
+        },
 
 )
