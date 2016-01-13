@@ -88,8 +88,8 @@ setup(
         "console_scripts": [
 
             # Make a script/executable called ``tabu`` which,
-            # when executed, loads and invokes ``tabu.cli.main.cli()``.
-            "tabu = tabu.cli.main:cli",
+            # when executed, loads and invokes ``tabu.utils.cli.main.cli()``.
+            "tabu = tabu.utils.cli.main:cli",
             ],
         },
 

@@ -14,6 +14,7 @@ from tabu.utils.cli.plugincli import PluginCli
 
 # Import any plugin modules you want the CLI to load here:
 from tabu.projects.foo.cli import foo
+from tabu.projects.system.cli import system
 
 # Now define the plugins you want the CLI to load.
 # Each key/value pairs should be in this format::
@@ -32,6 +33,7 @@ from tabu.projects.foo.cli import foo
 #         }
 #
 plugins = {
+    "system": system,
     "foo": foo,
     }
 
